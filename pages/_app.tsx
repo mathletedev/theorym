@@ -5,7 +5,7 @@ import { __prod__ } from "../utils/constants";
 
 const client = new ApolloClient({
 	cache: new InMemoryCache(),
-	uri: __prod__ ? "https://bytelr.vercel.app/api" : "http://localhost:3000/api"
+	uri: __prod__ ? "https://theorym.vercel.app/api" : "http://localhost:3000/api"
 });
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
