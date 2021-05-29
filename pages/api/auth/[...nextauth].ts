@@ -7,5 +7,6 @@ export default NextAuth({
 			clientId: process.env.GOOGLE_ID,
 			clientSecret: process.env.GOOGLE_SECRET
 		})
-	]
+	],
+	database: `${process.env.MONGO_URI}/theorym`
 });

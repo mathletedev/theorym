@@ -9,11 +9,23 @@ export class User {
 	readonly _id: ObjectId;
 
 	@Field()
-	@Property({ required: true, unique: true })
-	username: string;
+	@Property()
+	name: string;
 
-	@Property({ required: true })
-	password: string;
+	@Property()
+	email: string;
+
+	@Field()
+	@Property()
+	image: string;
+
+	@Field(() => Date)
+	@Property()
+	createdAt: Date;
+
+	@Field(() => Date)
+	@Property()
+	updatedAt: Date;
 }
 
 export const UserModel = getModelForClass(User);

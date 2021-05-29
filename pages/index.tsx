@@ -6,7 +6,7 @@ const GET_USERS = gql`
 	query GetUsers {
 		users {
 			_id
-			username
+			name
 		}
 	}
 `;
@@ -22,7 +22,7 @@ const Index: FC = () => {
 			<button onClick={() => router.push("/api/auth/signin")}>Login</button>
 			{data.users.map((user: any) => (
 				<p>
-					{user._id} | {user.username}
+					{user._id} | {user.name}
 				</p>
 			))}
 		</Fragment>
